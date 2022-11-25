@@ -30,7 +30,7 @@ steps:
   args: 
   - '-c'
   - |
-        cd
+        cd cluster
         terraform init
        
 
@@ -41,7 +41,7 @@ steps:
   args: 
   - '-c'
   - | 
-      cd
+      cd cluster
       terraform plan
 # [END tf-plan]
 
@@ -53,6 +53,6 @@ steps:
   - '-c'
   - | 
       
-        cd      
+        cd cluster
         terraform apply -auto-approve
       
