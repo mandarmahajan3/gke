@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "ideasmandar/gke-state"
+    bucket = "ideasmandar"
     prefix = "env/dev"
   }
 }
