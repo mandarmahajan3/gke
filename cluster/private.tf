@@ -8,14 +8,14 @@ provider "kubernetes" {
 
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google//modules/private-cluster"
-  project_id                 = "wipro-gcn-internal"
-  name                       = "gke-test-1"
-  region                     = "us-central1"
+  project_id                 = var.gkeproject
+  name                       = "mandar-gke-test-1"
+  region                     = var.gkeregion
   zones                      = ["us-central1-a", "us-central1-b", "us-central1-f"]
   network                    = var.gkevpc
   subnetwork                 = var.gkesubnet
-  ip_range_pods              = "us-central1-01-gke-01-pods"
-  ip_range_services          = "us-central1-01-gke-01-services"
+  ip_range_pods              = var.pods-range
+  ip_range_services          = var.services-range
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true

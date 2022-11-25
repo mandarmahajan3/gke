@@ -1,12 +1,12 @@
 provider "google" {
-  project     = "wipro-gcn-internal"
-  region      = "us-central1"
+  project     = var.gkeproject
+  region      = var.gkeregion
 }
 
 module "iap_bastion" {
   source = "terraform-google-modules/bastion-host/google"
 
-  project = "wipro-gcn-internal"
+  project = var.gkeproject
   zone    = "us-central1-a"
   name_prefix = "bas"
   network = var.gkevpc
