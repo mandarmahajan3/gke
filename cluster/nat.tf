@@ -15,6 +15,6 @@ module "cloud-nat" {
   project_id = var.gkeproject
   region     = var.gkeregion
   router     = google_compute_router.router.name
-  nat_ips    = google_compute_address.ip_address
+  nat_ips    = (google_compute_address.ip_address)
   source_subnetwork_ip_ranges_to_nat = "ALL_SUBNETWORKS_ALL_IP_RANGES"
 }
