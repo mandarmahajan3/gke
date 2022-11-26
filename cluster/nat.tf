@@ -3,7 +3,7 @@ resource "google_compute_address" "ip_address" {
 }
 
 resource "google_compute_router" "router" {
-  project = var.project_id
+  project = var.gkeproject
   name    = "gke-nat-router"
   network = var.gkevpc
   region  = var.gkeregion
