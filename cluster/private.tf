@@ -27,8 +27,7 @@ module "gke" {
 
  master_authorized_networks	= [{cidr_block = "10.128.0.0/20", display_name = "internal"
     },
-    "${google_compute_address.ip_address.self_link}"
-]
+    ]
   node_pools = [
     {
       name                      = "default-node-pool"

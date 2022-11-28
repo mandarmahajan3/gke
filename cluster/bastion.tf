@@ -18,4 +18,13 @@ module "iap_bastion" {
   machine_type = "f1-micro"
   image = "projects/debian-cloud/global/images/debian-11-bullseye-v20221102"
   name = "gke-bastion"
+  startup_script                     = file("${path.module}/bastion-startup.sh")
+  metadata = {
+    cluster_name    = module.gke.name,
+    location        = module.gke.location
+    service_project = module.service-project.project_id
+  }
+  depends_on = [
+    module.gke
+  ]
 }
