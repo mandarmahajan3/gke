@@ -1,5 +1,9 @@
+#!/bin/bash
+echo "apt-get update"
 sudo apt-get update 
+echo "apt-get install jq"
 sudo apt-get install jq
+sudo "apt-get install kubectl"
 sudo apt-get install kubectl
 
 export PROJECT_ID=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/service_project" -H "Metadata-Flavor: Google")
