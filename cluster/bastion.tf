@@ -21,8 +21,8 @@ module "iap_bastion" {
   startup_script                     = file("${path.module}/bastion-startup.sh")
   metadata = {
     cluster_name    = module.gke.name,
-    location        = module.gke.location
-    service_project = module.service-project.project_id
+    location        = module.gke.region
+    service_project = var.gkeproject
   }
   depends_on = [
     module.gke
