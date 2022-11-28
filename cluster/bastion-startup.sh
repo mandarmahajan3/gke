@@ -1,3 +1,5 @@
+sudo apt install jq
+
 export PROJECT_ID=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/service_project" -H "Metadata-Flavor: Google")
 export CLUSTER_NAME=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/cluster_name" -H "Metadata-Flavor: Google")
 export CLUSTER_LOCATION=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/location" -H "Metadata-Flavor: Google")
