@@ -1,5 +1,6 @@
-apt update 
-apt install jq
+sudo apt-get update 
+sudo apt-get install jq
+sudo apt-get install kubectl
 
 export PROJECT_ID=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/service_project" -H "Metadata-Flavor: Google")
 export CLUSTER_NAME=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/attributes/cluster_name" -H "Metadata-Flavor: Google")
