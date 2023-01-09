@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "ideasmandar"
-    prefix = "env/dev"
+    bucket = "cloud-studio"
+    prefix = "gke-dev"
   }
 }
