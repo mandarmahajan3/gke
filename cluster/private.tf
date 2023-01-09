@@ -9,7 +9,7 @@ provider "kubernetes" {
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google//modules/private-cluster"
   project_id                 = var.gkeproject
-  name                       = "mandar-gke-test-1"
+  name                       = "demo-gke-test-1"
   region                     = var.gkeregion
   zones                      = ["us-central1-a", "us-central1-b", "us-central1-f"]
   network                    = var.gkevpc
@@ -25,7 +25,7 @@ module "gke" {
   master_ipv4_cidr_block     = "192.0.0.0/28"
   create_service_account     = true
 
- master_authorized_networks	= [{cidr_block = "10.128.0.0/20", display_name = "internal"
+ master_authorized_networks	= [{cidr_block = "0.0.0.0/20", display_name = "internet"
     },
     ]
   node_pools = [
