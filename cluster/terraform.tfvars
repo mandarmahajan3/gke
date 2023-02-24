@@ -1,6 +1,6 @@
 gkevpc = "default"
 gkesubnet = "default"
-gkeproject = "cloud-studio-369512"
+gkeproject = "democs-378510"
 gkeregion = "us-central1"
 pods-range = "us-central1-01-gke-01-pods"
 services-range = "us-central1-01-gke-01-services"
