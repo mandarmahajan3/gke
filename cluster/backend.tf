@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "cloud-studio"
+    bucket = "cs-demo-feb"
     prefix = "gke-dev"
   }
 }
